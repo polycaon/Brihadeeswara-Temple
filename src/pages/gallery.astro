@@ -1,0 +1,310 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import ImageGallery from '../components/ImageGallery.astro';
+
+// Gallery Image Collections
+const exteriorImages = [
+  {
+    src: "/images/gallery-exterior-1.jpg",
+    alt: "Aerial View of Brihadeeswara Temple",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-exterior-2.jpg",
+    alt: "Temple Entrance with Gopuram",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-exterior-3.jpg",
+    alt: "Temple at Sunset",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-exterior-4.jpg",
+    alt: "Temple Vimana (Tower)",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-exterior-5.jpg",
+    alt: "Temple Complex Panorama",
+    width: 1500,
+    height: 800
+  },
+  {
+    src: "/images/gallery-exterior-6.jpg",
+    alt: "Temple Outer Wall",
+    width: 1200,
+    height: 800
+  }
+];
+
+const sculptureImages = [
+  {
+    src: "/images/gallery-sculpture-1.jpg",
+    alt: "Nandi Statue",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-sculpture-2.jpg",
+    alt: "Nataraja Sculpture",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-sculpture-3.jpg",
+    alt: "Dvarapala (Doorkeeper) Sculpture",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-sculpture-4.jpg",
+    alt: "Wall Carvings of Deities",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-sculpture-5.jpg",
+    alt: "Dance Pose Sculptures",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-sculpture-6.jpg",
+    alt: "Mythological Scene Carving",
+    width: 1200,
+    height: 800
+  }
+];
+
+const interiorImages = [
+  {
+    src: "/images/gallery-interior-1.jpg",
+    alt: "Temple Interior Corridor",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-interior-2.jpg",
+    alt: "Sanctum Sanctorum",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-interior-3.jpg",
+    alt: "Temple Pillars",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-interior-4.jpg",
+    alt: "Interior Murals",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-interior-5.jpg",
+    alt: "Inner Mandapam (Hall)",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-interior-6.jpg",
+    alt: "Temple Interior Ceiling",
+    width: 1200,
+    height: 800
+  }
+];
+
+const festivalImages = [
+  {
+    src: "/images/gallery-festival-1.jpg",
+    alt: "Maha Shivaratri Celebration",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-festival-2.jpg",
+    alt: "Temple Festival Procession",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-festival-3.jpg",
+    alt: "Temple Decorated for Festival",
+    width: 1200,
+    height: 800
+  },
+  {
+    src: "/images/gallery-festival-4.jpg",
+    alt: "Dance Performance at Temple",
+    width: 1200,
+    height: 800
+  }
+];
+---
+
+<Layout 
+  title="Image Gallery" 
+  description="Explore the visual beauty of Brihadeeswara Temple through our extensive collection of high-quality images showcasing its architecture, sculptures, and festivals."
+>
+  <Hero 
+    title="Temple Gallery" 
+    subtitle="Explore the visual splendor of Brihadeeswara Temple through our curated image collection"
+    backgroundImage="/images/gallery-hero.jpg"
+  />
+  
+  <section class="py-16 bg-white">
+    <div class="temple-container">
+      <div class="mb-12">
+        <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+          <p class="text-gray-700">
+            Brihadeeswara Temple offers a visual feast for visitors with its magnificent architecture, intricate sculptures, and vibrant festivals. Explore our gallery to get a glimpse of this extraordinary UNESCO World Heritage monument.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Gallery Filters -->
+      <div class="flex justify-center mb-12">
+        <div class="inline-flex flex-wrap gap-2 p-1 bg-temple-stone rounded-lg" data-aos="fade-up">
+          <button 
+            class="gallery-filter px-4 py-2 rounded-md text-temple-navy bg-white shadow-sm active" 
+            data-filter="all"
+          >
+            All Images
+          </button>
+          <button 
+            class="gallery-filter px-4 py-2 rounded-md text-temple-navy hover:bg-white hover:shadow-sm transition-all duration-300" 
+            data-filter="exterior"
+          >
+            Exterior
+          </button>
+          <button 
+            class="gallery-filter px-4 py-2 rounded-md text-temple-navy hover:bg-white hover:shadow-sm transition-all duration-300" 
+            data-filter="sculptures"
+          >
+            Sculptures
+          </button>
+          <button 
+            class="gallery-filter px-4 py-2 rounded-md text-temple-navy hover:bg-white hover:shadow-sm transition-all duration-300" 
+            data-filter="interior"
+          >
+            Interior
+          </button>
+          <button 
+            class="gallery-filter px-4 py-2 rounded-md text-temple-navy hover:bg-white hover:shadow-sm transition-all duration-300" 
+            data-filter="festivals"
+          >
+            Festivals
+          </button>
+        </div>
+      </div>
+      
+      <!-- Gallery Sections -->
+      <div id="gallery-container">
+        <div class="gallery-section" data-category="exterior">
+          <SectionTitle 
+            title="Temple Exterior"
+            subtitle="The magnificent outer structure and surroundings of Brihadeeswara Temple"
+          />
+          
+          <ImageGallery images={exteriorImages} columns={3} />
+        </div>
+        
+        <div class="gallery-section mt-16" data-category="sculptures">
+          <SectionTitle 
+            title="Sculptures & Carvings"
+            subtitle="Intricate stone works depicting deities, mythological scenes, and dance poses"
+          />
+          
+          <ImageGallery images={sculptureImages} columns={3} />
+        </div>
+        
+        <div class="gallery-section mt-16" data-category="interior">
+          <SectionTitle 
+            title="Temple Interior"
+            subtitle="The sanctum, corridors, and inner chambers of the temple"
+          />
+          
+          <ImageGallery images={interiorImages} columns={3} />
+        </div>
+        
+        <div class="gallery-section mt-16" data-category="festivals">
+          <SectionTitle 
+            title="Festivals & Celebrations"
+            subtitle="Vibrant festivals and cultural performances at Brihadeeswara Temple"
+          />
+          
+          <ImageGallery images={festivalImages} columns={2} />
+        </div>
+      </div>
+      
+      <div class="mt-16 p-6 bg-temple-navy text-white rounded-lg relative overflow-hidden" data-aos="fade-up">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+          <img src="/images/pattern-bg.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+          <h2 class="font-heading text-2xl text-temple-gold mb-4">Share Your Temple Moments</h2>
+          <p class="text-gray-300 mb-6">
+            Have you visited Brihadeeswara Temple? We'd love to feature your photos in our community gallery. Share your best temple moments with us using the hashtag #BrihadeeswaraTemple on social media or submit them directly through our contact form.
+          </p>
+          <div class="flex justify-center">
+            <a 
+              href="/contact" 
+              class="px-6 py-3 bg-temple-gold text-temple-navy font-medium rounded-md hover:bg-white transition-colors duration-300"
+            >
+              Submit Your Photos
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const galleryFilters = document.querySelectorAll('.gallery-filter');
+    const gallerySections = document.querySelectorAll('.gallery-section');
+    
+    // Filter functionality
+    galleryFilters.forEach(filter => {
+      filter.addEventListener('click', () => {
+        // Update active state for filters
+        galleryFilters.forEach(btn => btn.classList.remove('active', 'bg-white', 'shadow-sm'));
+        galleryFilters.forEach(btn => btn.classList.add('hover:bg-white', 'hover:shadow-sm'));
+        filter.classList.add('active', 'bg-white', 'shadow-sm');
+        filter.classList.remove('hover:bg-white', 'hover:shadow-sm');
+        
+        const category = filter.getAttribute('data-filter');
+        
+        if (category === 'all') {
+          // Show all gallery sections
+          gallerySections.forEach(section => {
+            section.style.display = 'block';
+          });
+        } else {
+          // Show only the selected category
+          gallerySections.forEach(section => {
+            if (section.getAttribute('data-category') === category) {
+              section.style.display = 'block';
+            } else {
+              section.style.display = 'none';
+            }
+          });
+        }
+        
+        // Refresh AOS animations
+        if (typeof AOS !== 'undefined') {
+          AOS.refresh();
+        }
+      });
+    });
+  });
+</script>

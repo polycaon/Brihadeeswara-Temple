@@ -1,0 +1,349 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import VisitorInfo from '../components/VisitorInfo.astro';
+
+// Visitor Information Data
+const templeTimings = [
+  {
+    icon: 'clock',
+    title: 'Temple Timings',
+    details: [
+      'Morning: 6:00 AM – 12:30 PM',
+      'Evening: 4:00 PM – 8:30 PM',
+      'Open all days of the week',
+      'Special extended hours during festivals'
+    ]
+  },
+  {
+    icon: 'calendar',
+    title: 'Pooja Schedule',
+    details: [
+      'Kaala Sandhi (Morning): 6:30 AM',
+      'Uchikalam (Noon): 12:00 PM',
+      'Sayarakshai (Evening): 5:30 PM',
+      'Arthajamam (Night): 8:00 PM'
+    ]
+  },
+  {
+    icon: 'ticket',
+    title: 'Entry Fee',
+    details: [
+      'Free entry for all devotees',
+      'Camera fee: ₹50 for still cameras',
+      'Video camera: ₹100 (special permission required)',
+      'Foreign tourists may be asked for ID'
+    ]
+  }
+];
+
+const visitorGuidelines = [
+  {
+    icon: 'attire',
+    title: 'Dress Code',
+    details: [
+      'Traditional attire is preferred',
+      'Men: Dhoti, Kurta, or formal pants & shirt',
+      'Women: Saree, Churidar, or modest western wear',
+      'Avoid shorts, sleeveless tops, and revealing clothes'
+    ]
+  },
+  {
+    icon: 'camera',
+    title: 'Photography Rules',
+    details: [
+      'Photography allowed in outer areas',
+      'No photography inside the sanctum sanctorum',
+      'No flash photography near paintings/murals',
+      'Tripods require special permission'
+    ]
+  },
+  {
+    icon: 'plane',
+    title: 'Important Guidelines',
+    details: [
+      'Remove footwear before entering the temple',
+      'Maintain silence in worship areas',
+      'Follow queue systems for darshan',
+      'Avoid carrying valuables, food, or plastic bags'
+    ]
+  }
+];
+
+const travelInfo = [
+  {
+    title: 'By Air',
+    details: 'The nearest airport is Tiruchirapalli International Airport (TRZ), approximately 55 km from Thanjavur. Taxis are available from the airport to Thanjavur.'
+  },
+  {
+    title: 'By Train',
+    details: 'Thanjavur Junction (TJ) is well-connected to major cities like Chennai, Madurai, and Trichy. The railway station is about 2 km from the temple.'
+  },
+  {
+    title: 'By Road',
+    details: 'Thanjavur is connected by excellent roads to all major cities in Tamil Nadu. Regular bus services operate from Chennai (350 km), Trichy (55 km), and Madurai (150 km).'
+  },
+  {
+    title: 'Local Transport',
+    details: 'Auto-rickshaws, taxis, and cycle rickshaws are available for local transportation within Thanjavur. Most city attractions are within 5 km of the temple.'
+  }
+];
+
+const accommodationOptions = [
+  {
+    title: 'Luxury Hotels',
+    details: 'Ideal River View Resort, Svatma, and Thanjavur Marriott offer premium accommodation with modern amenities within 5 km of the temple.'
+  },
+  {
+    title: 'Mid-Range Options',
+    details: 'Hotel Gnanam, Hotel Parisutham, and Hotel Tamil Nadu provide comfortable rooms at moderate prices, all within 3 km of the temple.'
+  },
+  {
+    title: 'Budget Stays',
+    details: 'Hotel Ramnath, Thanjavur Hi Tour, and several guesthouses offer affordable accommodation options close to the temple complex.'
+  },
+  {
+    title: 'Temple Accommodation',
+    details: 'The temple administration maintains a basic guesthouse for pilgrims, which can be booked in advance through the temple office.'
+  }
+];
+
+const faqs = [
+  {
+    question: 'What is the best time to visit Brihadeeswara Temple?',
+    answer: 'The best time to visit is from October to March when the weather is pleasant. Early mornings and late afternoons are ideal to avoid crowds and heat. The temple is particularly beautiful during sunrise and sunset.'
+  },
+  {
+    question: 'Are there guides available at the temple?',
+    answer: 'Yes, official guides licensed by the Archaeological Survey of India are available at the temple entrance. They offer tours in multiple languages including Tamil, English, and Hindi. Guide fees range from ₹300-500 depending on the tour duration.'
+  },
+  {
+    question: 'Can non-Hindus enter the temple?',
+    answer: 'Yes, the temple is open to people of all faiths. However, visitors are expected to respect the religious sentiments, follow the dress code, and observe the temple protocols.'
+  },
+  {
+    question: 'Are there any special festivals celebrated at the temple?',
+    answer: 'The temple celebrates numerous festivals throughout the year, with Maha Shivaratri (February-March), Panguni Uthiram (March-April), and Aipasi Brahmotsavam (October-November) being the most significant. The annual dance festival in January-February is also a major attraction.'
+  },
+  {
+    question: 'Is the temple wheelchair accessible?',
+    answer: 'The main pathways of the temple are accessible for wheelchairs, and ramps have been installed at key points. However, some inner areas may still be challenging to access. The temple staff is generally helpful with assisting differently-abled visitors.'
+  }
+];
+---
+
+<Layout 
+  title="Visitor Information" 
+  description="Plan your visit to Brihadeeswara Temple with essential information about timings, rituals, travel options, and accommodation in Thanjavur, Tamil Nadu."
+>
+  <Hero 
+    title="Visitor Information" 
+    subtitle="Everything you need to know for a memorable visit to Brihadeeswara Temple"
+    backgroundImage="/images/visitor-hero.jpg"
+  />
+  
+  <section class="py-16 bg-white">
+    <div class="temple-container">
+      <SectionTitle 
+        title="Temple Timings & Rituals"
+        subtitle="Plan your visit with these important timings and ritual schedules"
+        id="timings"
+      />
+      
+      <VisitorInfo items={templeTimings} />
+      
+      <div class="mt-16">
+        <SectionTitle 
+          title="Visitor Guidelines"
+          subtitle="Important information to ensure a respectful and fulfilling experience"
+        />
+        
+        <VisitorInfo items={visitorGuidelines} />
+      </div>
+      
+      <div class="mt-16" id="travel">
+        <SectionTitle 
+          title="How to Reach"
+          subtitle="Travel options to reach Brihadeeswara Temple in Thanjavur"
+        />
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div data-aos="fade-right">
+            <div class="space-y-8">
+              {travelInfo.map((item, index) => (
+                <div class="flex gap-4">
+                  <div class="mt-1 text-temple-gold">
+                    {index === 0 && (
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                      </svg>
+                    )}
+                    {index === 1 && (
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6ZM7.5 6h.008v.008H7.5V6Zm2.25 0h.008v.008H9.75V6Z" />
+                      </svg>
+                    )}
+                    {index === 2 && (
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                      </svg>
+                    )}
+                    {index === 3 && (
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                      </svg>
+                    )}
+                  </div>
+                  <div>
+                    <h3 class="font-heading text-xl font-bold mb-2 text-temple-navy">{item.title}</h3>
+                    <p class="text-gray-700">{item.details}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div class="mt-8 p-6 bg-temple-stone rounded-lg" data-aos="fade-up">
+              <h3 class="font-heading text-xl font-bold mb-3 text-temple-navy">Travel Tips</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <span class="text-temple-red mr-2 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span class="text-gray-700">If arriving by train or bus, pre-book a return ticket during peak season</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-temple-red mr-2 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span class="text-gray-700">For taxi services, use official prepaid counters at airports and railway stations</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-temple-red mr-2 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span class="text-gray-700">Consider hiring a local guide for a comprehensive temple tour</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div data-aos="fade-left">
+            <div class="h-96 rounded-lg overflow-hidden shadow-lg mb-6">
+              <!-- Google Maps Embed -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5!2m3!1f0!2m0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582d1644b15%3A0xbed2ecd2e4ef1097!2sBrihadeeswara%20Temple!5e0!3m2!1sen!2sus!4v1619733420871!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="p-6 bg-temple-navy text-white rounded-lg">
+              <h3 class="font-heading text-xl font-bold mb-3 text-temple-gold">Temple Address</h3>
+              <address class="not-italic">
+                <p class="mb-2">Brihadeeswara Temple (Peruvudaiyar Kovil)</p>
+                <p class="mb-2">South Main Street, Balaganapathy Nagar</p>
+                <p class="mb-2">Thanjavur - 613001</p>
+                <p class="mb-2">Tamil Nadu, India</p>
+                <p class="mb-2">
+                  <a href="tel:+914362271799" class="text-temple-gold hover:text-white">Phone: +91 4362 271799</a>
+                </p>
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-16" id="accommodation">
+        <SectionTitle 
+          title="Accommodation"
+          subtitle="Places to stay during your visit to Thanjavur"
+        />
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {accommodationOptions.map((option) => (
+            <div class="bg-white p-6 rounded-lg shadow-md temple-card" data-aos="fade-up">
+              <h3 class="font-heading text-xl font-bold mb-3 text-temple-navy">{option.title}</h3>
+              <p class="text-gray-700">{option.details}</p>
+            </div>
+          ))}
+        </div>
+        
+        <div class="mt-8 p-6 bg-temple-stone rounded-lg" data-aos="fade-up">
+          <h3 class="font-heading text-xl font-bold mb-3 text-temple-navy">Booking Tips</h3>
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <span class="text-temple-red mr-2 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-gray-700">Book accommodation in advance during peak tourist season (October-March) and festival periods</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-temple-red mr-2 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-gray-700">Hotels near the temple offer convenient access but may be priced higher</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-temple-red mr-2 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-gray-700">For longer stays, consider homestays that offer authentic Tamil cuisine and cultural experiences</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="mt-16" id="faq">
+        <SectionTitle 
+          title="Frequently Asked Questions"
+          subtitle="Common queries about visiting Brihadeeswara Temple"
+        />
+        
+        <div class="space-y-6" data-aos="fade-up">
+          {faqs.map((faq, index) => (
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h3 class="font-heading text-xl font-bold mb-3 text-temple-navy">{faq.question}</h3>
+              <p class="text-gray-700">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <div class="mt-16">
+        <div class="bg-temple-navy text-white p-8 rounded-lg relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <img src="/images/pattern-bg.jpg" alt="" class="w-full h-full object-cover" />
+          </div>
+          <div class="relative z-10">
+            <h2 class="font-heading text-3xl text-temple-gold mb-4">Need More Information?</h2>
+            <p class="text-gray-300 mb-6">
+              Our temple administration office is happy to assist with any additional questions you may have about visiting Brihadeeswara Temple.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a 
+                href="/contact" 
+                class="px-6 py-3 bg-temple-gold text-temple-navy font-medium rounded-md hover:bg-white transition-colors duration-300"
+              >
+                Contact Us
+              </a>
+              <a 
+                href="#" 
+                class="px-6 py-3 border border-white text-white font-medium rounded-md hover:bg-white hover:text-temple-navy transition-colors duration-300"
+              >
+                Download Visitor Guide (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

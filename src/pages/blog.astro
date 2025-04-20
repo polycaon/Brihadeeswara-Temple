@@ -1,0 +1,286 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import BlogCard from '../components/BlogCard.astro';
+
+// Featured blog posts
+const featuredPosts = [
+  {
+    title: "The Architectural Marvels of Brihadeeswara Temple",
+    excerpt: "Explore the unique architectural features that make this temple a UNESCO World Heritage site.",
+    date: "2023-06-15",
+    image: "/images/blog-architecture.jpg",
+    url: "/blog/architectural-marvels",
+    author: "Dr. Ramesh Kumar"
+  },
+  {
+    title: "Festivals Celebrated at Brihadeeswara Temple",
+    excerpt: "A comprehensive guide to the colorful festivals and rituals that take place throughout the year.",
+    date: "2023-04-22",
+    image: "/images/blog-festivals.jpg",
+    url: "/blog/temple-festivals",
+    author: "Lakshmi Narayan"
+  },
+  {
+    title: "Raja Raja Chola I: The Visionary Behind the Temple",
+    excerpt: "Learn about the great Chola king who commissioned this magnificent temple in the 11th century.",
+    date: "2023-03-10",
+    image: "/images/blog-raja-raja-chola.jpg",
+    url: "/blog/raja-raja-chola",
+    author: "Prof. Senthil Nathan"
+  }
+];
+
+// Recent blog posts
+const recentPosts = [
+  {
+    title: "Conservation Efforts at Brihadeeswara Temple",
+    excerpt: "Discover the ongoing work to preserve this ancient monument for future generations.",
+    date: "2023-08-05",
+    image: "/images/blog-conservation.jpg",
+    url: "/blog/conservation-efforts",
+    author: "Anjali Menon"
+  },
+  {
+    title: "The Sacred Rituals of Thanjavur Temples",
+    excerpt: "An in-depth look at the daily and special rituals performed at Brihadeeswara and surrounding temples.",
+    date: "2023-07-18",
+    image: "/images/blog-rituals.jpg",
+    url: "/blog/sacred-rituals",
+    author: "Swami Dayananda"
+  },
+  {
+    title: "Chola Bronze Sculptures: A Cultural Legacy",
+    excerpt: "The art of bronze casting reached its zenith under the Cholas. Explore this magnificent art form.",
+    date: "2023-06-30",
+    image: "/images/blog-bronzes.jpg",
+    url: "/blog/chola-bronzes",
+    author: "Dr. Maya Krishnan"
+  },
+  {
+    title: "Visitor's Guide: Best Time to Visit Brihadeeswara Temple",
+    excerpt: "Planning your trip to Thanjavur? Here's when to visit for the best experience.",
+    date: "2023-05-25",
+    image: "/images/blog-visit-guide.jpg",
+    url: "/blog/best-time-to-visit",
+    author: "Vikram Sundar"
+  },
+  {
+    title: "The Musical Tradition of Thanjavur",
+    excerpt: "From temple music to Carnatic concerts, discover the rich musical heritage of the region.",
+    date: "2023-05-12",
+    image: "/images/blog-music.jpg",
+    url: "/blog/musical-tradition",
+    author: "Aruna Sairam"
+  },
+  {
+    title: "Photography Tips for Temple Visitors",
+    excerpt: "Capture the beauty of Brihadeeswara Temple with these expert photography tips.",
+    date: "2023-04-08",
+    image: "/images/blog-photography.jpg",
+    url: "/blog/photography-tips",
+    author: "Karthik Raja"
+  }
+];
+
+// Blog categories
+const categories = [
+  "Architecture",
+  "History",
+  "Cultural Heritage",
+  "Festivals & Rituals",
+  "Conservation",
+  "Visitor Guides",
+  "Art & Sculpture",
+  "Music & Dance",
+  "Raja Raja Chola",
+  "UNESCO Heritage"
+];
+
+// Recent comments
+const recentComments = [
+  {
+    name: "Priya Sharma",
+    comment: "The article on Chola bronzes was incredibly informative. I had no idea about the complex process involved in creating these masterpieces.",
+    date: "3 days ago",
+    post: "Chola Bronze Sculptures: A Cultural Legacy"
+  },
+  {
+    name: "John Williams",
+    comment: "I visited the temple last month and followed the photography tips from your blog. They really helped me capture some amazing shots!",
+    date: "1 week ago",
+    post: "Photography Tips for Temple Visitors"
+  },
+  {
+    name: "Rajesh Venkat",
+    comment: "The historical context provided about Raja Raja Chola gives so much meaning to my temple visits. Looking forward to more such articles.",
+    date: "2 weeks ago",
+    post: "Raja Raja Chola I: The Visionary Behind the Temple"
+  }
+];
+---
+
+<Layout 
+  title="Blog & News" 
+  description="Read articles about Brihadeeswara Temple's history, architecture, festivals, and cultural significance. Stay updated with the latest news and events."
+>
+  <Hero 
+    title="Blog & News" 
+    subtitle="Stories, insights, and updates about Brihadeeswara Temple"
+    backgroundImage="/images/blog-hero.jpg"
+  />
+  
+  <section class="py-16 bg-white">
+    <div class="temple-container">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <!-- Featured Posts -->
+          <div class="mb-16">
+            <SectionTitle 
+              title="Featured Articles"
+              subtitle="Highlighted stories about Brihadeeswara Temple"
+              alignment="left"
+            />
+            
+            <div class="space-y-8">
+              {featuredPosts.map((post, index) => (
+                <div data-aos="fade-up" data-aos-delay={index * 100}>
+                  <BlogCard {...post} />
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <!-- Recent Posts -->
+          <div>
+            <SectionTitle 
+              title="Recent Posts"
+              subtitle="The latest articles and updates"
+              alignment="left"
+            />
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {recentPosts.map((post, index) => (
+                <div data-aos="fade-up" data-aos-delay={index * 50}>
+                  <BlogCard {...post} />
+                </div>
+              ))}
+            </div>
+            
+            <!-- Pagination -->
+            <div class="mt-12 flex justify-center">
+              <nav class="inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                  <span class="sr-only">Previous</span>
+                  <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+                <a href="#" aria-current="page" class="relative inline-flex items-center px-4 py-2 border border-temple-red bg-temple-red text-sm font-medium text-white">1</a>
+                <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">2</a>
+                <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">3</a>
+                <span class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700">...</span>
+                <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">8</a>
+                <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">9</a>
+                <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                  <span class="sr-only">Next</span>
+                  <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="mt-12 lg:mt-0">
+          <!-- Search -->
+          <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h3 class="font-heading text-xl font-bold mb-4 text-temple-navy">Search Articles</h3>
+            <div class="relative">
+              <input 
+                type="text" 
+                placeholder="Search blog posts..." 
+                class="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-temple-red focus:border-transparent"
+              />
+              <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Categories -->
+          <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h3 class="font-heading text-xl font-bold mb-4 text-temple-navy">Categories</h3>
+            <ul class="space-y-2">
+              {categories.map(category => (
+                <li>
+                  <a href={`/blog/category/${category.toLowerCase().replace(/\s+/g, '-')}`} class="flex items-center justify-between text-gray-700 hover:text-temple-red transition-colors duration-200">
+                    <span>{category}</span>
+                    <span class="bg-temple-stone text-temple-navy text-xs font-semibold px-2 py-1 rounded-full">12</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <!-- Recent Comments -->
+          <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h3 class="font-heading text-xl font-bold mb-4 text-temple-navy">Recent Comments</h3>
+            <div class="space-y-4">
+              {recentComments.map(comment => (
+                <div class="pb-4 border-b border-gray-100 last:border-b-0 last:pb-0">
+                  <p class="text-gray-700 mb-2 text-sm italic">"{comment.comment.length > 100 ? comment.comment.substring(0, 100) + '...' : comment.comment}"</p>
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="font-semibold text-temple-navy">{comment.name}</span>
+                    <span class="text-gray-500">{comment.date}</span>
+                  </div>
+                  <div class="text-xs text-gray-500 mt-1">
+                    on <a href="#" class="text-temple-red hover:underline">{comment.post}</a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <!-- Subscribe -->
+          <div class="bg-temple-navy text-white rounded-lg shadow-md p-6 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10">
+              <img src="/images/pattern-bg.jpg" alt="" class="w-full h-full object-cover" />
+            </div>
+            <div class="relative z-10">
+              <h3 class="font-heading text-xl font-bold mb-4 text-temple-gold">Subscribe to Our Newsletter</h3>
+              <p class="text-gray-300 mb-4 text-sm">
+                Stay updated with the latest articles, events, and announcements about Brihadeeswara Temple.
+              </p>
+              <form class="space-y-4">
+                <div>
+                  <input 
+                    type="email" 
+                    placeholder="Your email address" 
+                    class="w-full py-2 px-4 bg-white/10 border border-white/20 rounded-md focus:ring-2 focus:ring-temple-gold focus:border-transparent text-white placeholder-gray-300"
+                    required
+                  />
+                </div>
+                <button 
+                  type="submit" 
+                  class="w-full py-2 px-4 bg-temple-gold text-temple-navy font-medium rounded-md hover:bg-white transition-colors duration-300"
+                >
+                  Subscribe
+                </button>
+              </form>
+              <p class="text-xs text-gray-400 mt-4">
+                We respect your privacy. Unsubscribe at any time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

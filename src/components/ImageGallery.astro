@@ -1,0 +1,125 @@
+---
+interface Image {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+interface Props {
+  images: Image[];
+  columns?: number;
+}
+
+const { images, columns = 3 } = Astro.props;
+
+const getColumnClass = (cols: number) => {
+  const columnClasses = {
+    2: 'grid-cols-1 sm:grid-cols-2',
+    3: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
+    4: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
+  };
+  
+  return columnClasses[cols as keyof typeof columnClasses] || columnClasses[3];
+};
+---
+
+<div class={`grid ${getColumnClass(columns)} gap-4`}>
+  {images.map((image, index) => (
+    <a 
+      href={image.src} 
+      class="gallery-item temple-card overflow-hidden block" 
+      data-aos="fade-up" 
+      data-aos-delay={index * 50}
+      data-pswp-width={image.width}
+      data-pswp-height={image.height}
+    >
+      <img 
+        src={image.src} 
+        alt={image.alt} 
+        class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110" 
+        loading="lazy"
+      />
+    </a>
+  ))}
+</div>
+
+<script>
+  import PhotoSwipe from 'photoswipe';
+  import 'photoswipe/style.css';
+
+  let pswpElement = document.createElement('div');
+  pswpElement.className = 'pswp';
+  pswpElement.innerHTML = `
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  document.body.appendChild(pswpElement);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const options = {
+          index,
+          bgOpacity: 0.85,
+          showHideOpacity: true
+        };
+        
+        // Collect all gallery items for PhotoSwipe
+        const items = Array.from(galleryItems).map(galleryItem => {
+          const link = galleryItem as HTMLAnchorElement;
+          return {
+            src: link.href,
+            w: parseInt(link.dataset.pswpWidth || '1200', 10),
+            h: parseInt(link.dataset.pswpHeight || '800', 10),
+            alt: link.querySelector('img')?.alt || ''
+          };
+        });
+        
+        // Initialize PhotoSwipe
+        const pswp = new PhotoSwipe({
+          gallery: pswpElement,
+          options,
+          dataSource: items
+        });
+        
+        pswp.init();
+      });
+    });
+  });
+</script>

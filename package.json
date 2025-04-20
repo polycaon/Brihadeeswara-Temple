@@ -1,0 +1,23 @@
+{
+  "name": "brihadeeswara-temple",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.2.5",
+    "@astrojs/tailwind": "^5.1.0",
+    "tailwindcss": "^3.3.3",
+    "aos": "^2.3.4",
+    "swiper": "^10.0.0",
+    "photoswipe": "^5.3.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

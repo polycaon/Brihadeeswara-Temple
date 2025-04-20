@@ -1,0 +1,56 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  alignment?: 'left' | 'center' | 'right';
+}
+
+const { 
+  title, 
+  subtitle, 
+  alignment = 'center' 
+} = Astro.props;
+
+const textAlign = {
+  left: 'text-left',
+  center: 'text-center',
+  right: 'text-right'
+};
+
+const alignClass = textAlign[alignment];
+---
+
+<div class={`mb-12 ${alignClass}`} data-aos="fade-up">
+  <h2 class={`font-heading text-3xl md:text-4xl text-temple-navy relative inline-block section-title ${alignment === 'center' ? 'section-title-center' : alignment === 'right' ? 'section-title-right' : ''}`}>
+    {title}
+  </h2>
+  {subtitle && <p class="text-gray-600 mt-4 max-w-3xl mx-auto">{subtitle}</p>}
+</div>
+
+<style>
+  .section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background-color: #D4AF37;
+  }
+
+  .section-title-center::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .section-title-right::after {
+    left: auto;
+    right: 0;
+  }
+</style>
