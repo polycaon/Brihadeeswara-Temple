@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import SectionTitle from '../components/SectionTitle.astro';
-import FeatureCard from '../components/FeatureCard.astro';
 import BlogCard from '../components/BlogCard.astro';
 
 const featuredBlogPosts = [
@@ -10,7 +9,7 @@ const featuredBlogPosts = [
     title: "The Architectural Marvels of Brihadeeswara Temple",
     excerpt: "Explore the unique architectural features that make this temple a UNESCO World Heritage site.",
     date: "2023-06-15",
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7",
+    image: "/images/blog-architecture.jpg",
     url: "/blog/architectural-marvels",
     author: "Dr. Ramesh Kumar"
   },
@@ -18,7 +17,7 @@ const featuredBlogPosts = [
     title: "Festivals Celebrated at Brihadeeswara Temple",
     excerpt: "A comprehensive guide to the colorful festivals and rituals that take place throughout the year.",
     date: "2023-04-22",
-    image: "https://images.unsplash.com/photo-1604693331273-858fcfc384bf",
+    image: "/images/blog-festivals.jpg",
     url: "/blog/temple-festivals",
     author: "Lakshmi Narayan"
   },
@@ -26,7 +25,7 @@ const featuredBlogPosts = [
     title: "Raja Raja Chola I: The Visionary Behind the Temple",
     excerpt: "Learn about the great Chola king who commissioned this magnificent temple in the 11th century.",
     date: "2023-03-10",
-    image: "https://images.unsplash.com/photo-1590059300824-aa30d5cd4f4d",
+    image: "/images/blog-raja-raja-chola.jpg",
     url: "/blog/raja-raja-chola",
     author: "Prof. Senthil Nathan"
   }
@@ -38,7 +37,7 @@ const featuredBlogPosts = [
   <Hero 
     title="Brihadeeswara Temple" 
     subtitle="A Masterpiece of Dravidian Architecture and UNESCO World Heritage Site"
-    backgroundImage="https://images.unsplash.com/photo-1605649487212-47bdab064df7"
+backgroundImage="https://t3.ftcdn.net/jpg/05/59/74/36/240_F_559743693_dAUFbSqvfH03wwPI8YmWWB5d9wc4yDJy.jpg"
     height="h-[40vh]"
   />
   
@@ -100,7 +99,6 @@ const featuredBlogPosts = [
             subtitle="Built by Raja Raja Chola I in the 11th century"
             alignment="left"
           />
-          
           <div class="prose prose-lg text-gray-700">
             <p class="mb-4">Standing tall at the center of Thanjavur, this magnificent structure represents the pinnacle of Chola dynasty's architectural brilliance. The temple's vimana rises to 216 feet, making it one of the tallest of its kind in the world.</p>
             <p class="mb-4">Built entirely of granite, the temple showcases the engineering mastery of ancient Tamil architects. The massive stone blocks were transported from quarries over 60 kilometers away using just manpower and ingenuity.</p>
@@ -119,7 +117,7 @@ const featuredBlogPosts = [
         
         <div class="relative" data-aos="fade-left">
           <img 
-            src="https://images.unsplash.com/photo-1605649487212-47bdab064df7"
+            src="https://images.unsplash.com/photo-1603766806347-54cdf3745953"
             alt="Brihadeeswara Temple Architecture" 
             class="w-full rounded-lg shadow-xl"
           />
@@ -134,7 +132,7 @@ const featuredBlogPosts = [
   <!-- Plan Your Visit Section -->
   <section class="py-12 bg-temple-navy text-white relative overflow-hidden">
     <div class="absolute top-0 left-0 w-full h-full opacity-10">
-      <img src="https://images.unsplash.com/photo-1558244661-d1458348479f" alt="" class="w-full h-full object-cover" />
+      <img src="/images/content/pattern-bg.jpg" alt="" class="w-full h-full object-cover" />
     </div>
     <div class="temple-container relative z-10">
       <div class="max-w-2xl mx-auto text-center" data-aos="fade-up">
