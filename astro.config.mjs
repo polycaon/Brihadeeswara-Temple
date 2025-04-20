@@ -15,14 +15,5 @@ export default defineConfig({
         protocol: 'wss'
       }
     }
-  },
-  // SEO Configuration
-  markdown: {
-    shikiConfig: {
-      theme: 'github-light'
-    }
-  },
-  experimental: {
-    assets: true
   }
 });
