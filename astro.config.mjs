@@ -3,6 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
+  site: 'https://brihadeeswaratemple.com',
   output: 'static',
   build: {
     format: 'directory'

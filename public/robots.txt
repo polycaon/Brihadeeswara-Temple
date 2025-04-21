@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://brihadeeswara-temple.com/sitemap.xml
+Sitemap: https://brihadeeswaratemple.com/sitemap.xml
