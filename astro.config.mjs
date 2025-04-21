@@ -1,11 +1,17 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
+import vercel from '@astrojs/vercel/static';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://brihadeeswaratemple.com',
   output: 'static',
-  build: {
-    assets: '_assets'
-  }
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+    speedInsights: {
+      enabled: true,
+    },
+  }),
+  site: 'https://brihadeeswaratemple.com',
 });

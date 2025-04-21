@@ -3,16 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Hero from '../../components/Hero.astro';
 import { getBlogPost } from '../../lib/supabase';
 
-export async function getStaticPaths() {
-  return [
-    { params: { slug: 'architectural-marvels' } },
-    { params: { slug: 'temple-festivals' } },
-    { params: { slug: 'raja-raja-chola' } }
-  ];
-}
-
 const { slug } = Astro.params;
-const post = await getBlogPost(slug);
+const post = await getBlogPost(slug || '');
 
 if (!post) {
   return Astro.redirect('/404');
@@ -34,7 +26,7 @@ if (!post) {
     <div class="temple-container max-w-4xl">
       <div class="prose prose-lg mx-auto">
         <p class="text-gray-600 mb-8">
-          Published on {new Date(post.published_at).toLocaleDateString()}
+          Published on {new Date(post.published_at || '').toLocaleDateString()}
         </p>
         
         <div class="content">

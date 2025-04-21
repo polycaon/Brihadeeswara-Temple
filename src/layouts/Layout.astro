@@ -50,7 +50,6 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     
     <title>{title} | Brihadeeswara Temple</title>
   </head>
@@ -60,18 +59,5 @@ const {
       <slot />
     </main>
     <Footer />
-    
-    <script>
-      import AOS from 'aos';
-      
-      // Initialize AOS animation library
-      document.addEventListener('DOMContentLoaded', () => {
-        AOS.init({
-          duration: 800,
-          easing: 'ease-out',
-          once: true
-        });
-      });
-    </script>
   </body>
 </html>
