@@ -12,6 +12,5 @@ export default defineConfig({
     speedInsights: {
       enabled: true,
     },
-  }),
-  site: 'https://brihadeeswaratemple.com',
+  })
 });
