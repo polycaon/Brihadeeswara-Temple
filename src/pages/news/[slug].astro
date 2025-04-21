@@ -4,14 +4,25 @@ import Hero from '../../components/Hero.astro';
 import { getBlogPost, getBlogPosts } from '../../lib/supabase';
 
 export async function getStaticPaths() {
-  const posts = await getBlogPosts();
-  return posts.map(post => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
+  try {
+    const posts = await getBlogPosts();
+    return posts.map(post => ({
+      params: { slug: post.slug },
+      props: { post },
+    }));
+  } catch (error) {
+    // Fallback to empty array if database is not accessible during build
+    console.error('Error fetching blog posts:', error);
+    return [];
+  }
 }
 
 const { post } = Astro.props;
+
+// Fallback content if post is not found
+if (!post) {
+  return Astro.redirect('/404');
+}
 
 // Convert newlines to paragraphs
 const formattedContent = post.content.split('\n\n').map(paragraph => 
