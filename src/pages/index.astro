@@ -3,33 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import BlogCard from '../components/BlogCard.astro';
+import { getBlogPosts } from '../lib/supabase';
 
-const featuredBlogPosts = [
-  {
-    title: "The Architectural Marvels of Brihadeeswara Temple",
-    excerpt: "Explore the unique architectural features that make this temple a UNESCO World Heritage site.",
-    date: "2023-06-15",
-    image: "/images/blog-architecture.jpg",
-    url: "/blog/architectural-marvels",
-    author: "Dr. Ramesh Kumar"
-  },
-  {
-    title: "Festivals Celebrated at Brihadeeswara Temple",
-    excerpt: "A comprehensive guide to the colorful festivals and rituals that take place throughout the year.",
-    date: "2023-04-22",
-    image: "/images/blog-festivals.jpg",
-    url: "/blog/temple-festivals",
-    author: "Lakshmi Narayan"
-  },
-  {
-    title: "Raja Raja Chola I: The Visionary Behind the Temple",
-    excerpt: "Learn about the great Chola king who commissioned this magnificent temple in the 11th century.",
-    date: "2023-03-10",
-    image: "/images/blog-raja-raja-chola.jpg",
-    url: "/blog/raja-raja-chola",
-    author: "Prof. Senthil Nathan"
-  }
-];
+const blogPosts = await getBlogPosts();
 ---
 
 <Layout title="Brihadeeswara Temple - UNESCO World Heritage Site in Thanjavur, India">
@@ -37,7 +13,7 @@ const featuredBlogPosts = [
   <Hero 
     title="Brihadeeswara Temple" 
     subtitle="A Masterpiece of Dravidian Architecture and UNESCO World Heritage Site"
-backgroundImage="https://t3.ftcdn.net/jpg/05/59/74/36/240_F_559743693_dAUFbSqvfH03wwPI8YmWWB5d9wc4yDJy.jpg"
+    backgroundImage="https://t3.ftcdn.net/jpg/05/59/74/36/240_F_559743693_dAUFbSqvfH03wwPI8YmWWB5d9wc4yDJy.jpg"
     height="h-[40vh]"
   />
   
@@ -167,16 +143,19 @@ backgroundImage="https://t3.ftcdn.net/jpg/05/59/74/36/240_F_559743693_dAUFbSqvfH
       />
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {featuredBlogPosts.map((post, index) => (
+        {blogPosts.slice(0, 3).map((post, index) => (
           <div data-aos="fade-up" data-aos-delay={index * 100}>
-            <BlogCard {...post} />
+            <BlogCard 
+              title={post.title}
+              url={`/news/${post.slug}`}
+            />
           </div>
         ))}
       </div>
       
       <div class="text-center mt-8">
         <a 
-          href="/blog" 
+          href="/news" 
           class="inline-block px-6 py-2 bg-temple-navy text-white font-medium rounded-md hover:bg-temple-red transition-all duration-300 transform hover:scale-105"
         >
           View All Articles

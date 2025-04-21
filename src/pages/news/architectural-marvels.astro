@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+
+const publishDate = new Date('2024-01-15');
+---
+
+<Layout 
+  title="The Architectural Marvels of Brihadeeswara Temple" 
+  description="Explore the unique architectural features that make Brihadeeswara Temple a UNESCO World Heritage site"
+>
+  <Hero 
+    title="The Architectural Marvels" 
+    subtitle="Exploring the Temple's Unique Features"
+    backgroundImage="https://t3.ftcdn.net/jpg/05/59/74/36/240_F_559743693_dAUFbSqvfH03wwPI8YmWWB5d9wc4yDJy.jpg"
+    height="h-[40vh]"
+  />
+  
+  <article class="py-16 bg-white">
+    <div class="temple-container max-w-4xl">
+      <div class="prose prose-lg mx-auto">
+        <p class="text-gray-600 mb-8">Published on {publishDate.toLocaleDateString()}</p>
+        
+        <p>The Brihadeeswara Temple stands as a testament to the architectural brilliance of the Chola dynasty. Built in 1010 CE by Raja Raja Chola I, the temple showcases several remarkable architectural features that continue to amaze visitors and scholars alike.</p>
+
+        <h2>The Magnificent Vimana</h2>
+        <p>The temple's most striking feature is its massive vimana (tower), which rises to a height of 216 feet (66 meters). The tower is crowned with an 80-ton granite block, a feat of engineering that still puzzles experts today.</p>
+
+        <h2>Recent Discoveries</h2>
+        <p>Recent archaeological studies have revealed new insights into the temple's construction techniques and the mathematical principles employed by its ancient architects.</p>
+      </div>
+    </div>
+  </article>
+</Layout>

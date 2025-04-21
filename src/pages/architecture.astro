@@ -2,35 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import SectionTitle from '../components/SectionTitle.astro';
-import ImageGallery from '../components/ImageGallery.astro';
 
-// Sample architecture images for the gallery
-const architectureImages = [
-  {
-    src: "/images/architecture-vimana.jpg",
-    alt: "Temple Vimana (Tower)",
-    width: 1200,
-    height: 800
-  },
-  {
-    src: "/images/architecture-nandi.jpg",
-    alt: "Nandi Statue",
-    width: 1200,
-    height: 800
-  },
-  {
-    src: "/images/architecture-pillars.jpg",
-    alt: "Ornate Pillars",
-    width: 1200,
-    height: 800
-  },
-  {
-    src: "/images/architecture-carvings.jpg",
-    alt: "Wall Carvings",
-    width: 1200,
-    height: 800
-  }
-];
 ---
 
 <Layout 
@@ -40,7 +12,8 @@ const architectureImages = [
   <Hero 
     title="Temple Architecture" 
     subtitle="Explore the Dravidian architectural brilliance that has stood the test of time"
-    backgroundImage="/images/architecture-hero.jpg"
+    backgroundImage="https://t3.ftcdn.net/jpg/05/59/74/36/240_F_559743693_dAUFbSqvfH03wwPI8YmWWB5d9wc4yDJy.jpg"
+    height="h-[40vh]"
   />
   
   <section class="py-16 bg-white">
@@ -65,7 +38,7 @@ const architectureImages = [
         </div>
         <div data-aos="fade-left">
           <img 
-            src="/images/architecture-engineering.jpg" 
+            src="https://scontent.fblr8-1.fna.fbcdn.net/v/t1.6435-9/190753654_117615400483348_7235335388301101622_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kGqW1lNM1xUQ7kNvwHSvsKR&_nc_oc=Adn-iU01tkMrUGPAcKFan-EjIS58USw7hq5ARrDrzC_4XJkFcXZp0V89OwdmoMJqnNc&_nc_zt=23&_nc_ht=scontent.fblr8-1.fna&_nc_gid=SxY_m5rTWRu0cyBQUKgh0A&oh=00_AfEgm8VNYK_2adsl9mPEGJAHKdsOX22qgJDKuMs9shURfg&oe=682D4564" 
             alt="Engineering Details of the Temple" 
             class="w-full rounded-lg shadow-lg"
           />
@@ -94,7 +67,7 @@ const architectureImages = [
             </div>
             <div class="order-1 lg:order-2" data-aos="fade-left">
               <img 
-                src="/images/architecture-vimana-detail.jpg" 
+                src="https://qph.cf2.quoracdn.net/main-qimg-89fdfa39aab95e8ce18ad1375d3a30a5" 
                 alt="Vimana (Temple Tower) Details" 
                 class="w-full rounded-lg shadow-lg"
               />
@@ -106,7 +79,7 @@ const architectureImages = [
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             <div data-aos="fade-right">
               <img 
-                src="/images/architecture-nandi-detail.jpg" 
+                src="https://qph.cf2.quoracdn.net/main-qimg-354a70e4ee98aacf3c861d0f7a94fa67-lq" 
                 alt="Nandi (Sacred Bull) Details" 
                 class="w-full rounded-lg shadow-lg"
               />
@@ -142,7 +115,7 @@ const architectureImages = [
             </div>
             <div class="order-1 lg:order-2" data-aos="fade-left">
               <img 
-                src="/images/architecture-sanctum.jpg" 
+                src="https://qph.cf2.quoracdn.net/main-qimg-8c9659c89e509b734a1be8773d9106d6-lq" 
                 alt="Sanctum Sanctorum" 
                 class="w-full rounded-lg shadow-lg"
               />
@@ -154,7 +127,7 @@ const architectureImages = [
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             <div data-aos="fade-right">
               <img 
-                src="/images/architecture-gopuram.jpg" 
+                src="https://qph.cf2.quoracdn.net/main-qimg-cd7b5d5b01d88f2945a48dd1913af8f6-lq" 
                 alt="Temple Gopuram (Gateway)" 
                 class="w-full rounded-lg shadow-lg"
               />
@@ -169,99 +142,6 @@ const architectureImages = [
               </p>
               <p class="text-gray-700">
                 The outer prakaram houses numerous sub-shrines dedicated to various deities, including the Pancha Lingams (five lingams representing the five elements), Subrahmanya, Ganapati, and the Ashta-dikpaalakas (eight guardians of the directions).
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="mb-16">
-        <SectionTitle 
-          title="Sculptural Excellence"
-          subtitle="The temple walls serve as a canvas for some of the finest examples of Chola sculpture"
-        />
-        
-        <div class="mb-8" data-aos="fade-up">
-          <p class="text-gray-700 mb-8">
-            Brihadeeswara Temple features over 1,000 sculptures carved in-situ from the granite blocks of the temple. These sculptures depict various forms of Shiva, other deities from the Hindu pantheon, celestial beings, and royal patrons.
-          </p>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <div class="bg-temple-stone p-6 rounded-lg">
-              <h4 class="font-heading text-xl font-bold mb-3 text-temple-navy">Dance Sculptures</h4>
-              <p class="text-gray-700">
-                The temple features sculptures depicting 108 karanas (dance poses) from the Natya Shastra, India's ancient text on performing arts. These are the earliest known sculptural representations of these classical dance positions.
-              </p>
-            </div>
-            <div class="bg-temple-stone p-6 rounded-lg">
-              <h4 class="font-heading text-xl font-bold mb-3 text-temple-navy">Dvarapalas</h4>
-              <p class="text-gray-700">
-                Massive dvarapalas (doorkeepers) guard the entrances to the temple. These figures, standing over 8 feet tall, showcase the sculptors' ability to create imposing figures with dynamic poses and expressive features.
-              </p>
-            </div>
-            <div class="bg-temple-stone p-6 rounded-lg">
-              <h4 class="font-heading text-xl font-bold mb-3 text-temple-navy">Deities & Mythological Scenes</h4>
-              <p class="text-gray-700">
-                The walls are adorned with intricate carvings depicting various forms of Shiva, including Nataraja (the cosmic dancer), Dakshinamurthy (the teacher), and Bhikshatana (the mendicant).
-              </p>
-            </div>
-          </div>
-          
-          <p class="text-gray-700 mb-6">
-            The sculptural program of the temple follows a carefully planned iconographic scheme, with deities placed according to their cosmic significance and relationship to the main deity. This arrangement reflects the sophisticated theological understanding of the temple's designers.
-          </p>
-          
-          <ImageGallery images={architectureImages} />
-        </div>
-      </div>
-      
-      <div>
-        <SectionTitle 
-          title="Inscriptions & Murals"
-          subtitle="The temple walls serve as historical records and artistic canvases"
-        />
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div data-aos="fade-right">
-            <h3 class="font-heading text-2xl font-bold mb-4 text-temple-navy">Inscriptions</h3>
-            <p class="text-gray-700 mb-4">
-              The walls of Brihadeeswara Temple contain over 400 inscriptions in Tamil and Grantha scripts, dating from the Chola period to later dynasties. These inscriptions serve as invaluable historical records.
-            </p>
-            <p class="text-gray-700 mb-4">
-              The inscriptions detail:
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
-              <li>The king's military victories and territorial conquests</li>
-              <li>Land grants and donations to the temple</li>
-              <li>Administrative arrangements for temple maintenance</li>
-              <li>Details about temple rituals, festivals, and performances</li>
-              <li>Names of artisans, musicians, and dancers employed by the temple</li>
-            </ul>
-            <p class="text-gray-700">
-              These inscriptions have been crucial for historians in reconstructing the political, economic, social, and cultural life of the Chola period, making the temple not just a religious monument but also a historical archive.
-            </p>
-          </div>
-          <div data-aos="fade-left">
-            <h3 class="font-heading text-2xl font-bold mb-4 text-temple-navy">Murals</h3>
-            <p class="text-gray-700 mb-4">
-              The inner walls of the temple were once adorned with elaborate frescoes painted in the Chola style. Though many have been lost to time, some remain visible, particularly in the circumambulatory passage around the sanctum.
-            </p>
-            <p class="text-gray-700 mb-4">
-              The surviving murals depict:
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
-              <li>Scenes from Hindu mythology, particularly stories of Shiva</li>
-              <li>Portraits of Raja Raja Chola I and his principal queen</li>
-              <li>Court scenes showcasing royal life in the Chola period</li>
-              <li>Dance performances and musical ensembles</li>
-            </ul>
-            <p class="text-gray-700">
-              These paintings were executed using natural pigments on a lime plaster base. They showcase the sophisticated color palette, composition techniques, and iconographic conventions of medieval South Indian painting.
-            </p>
-            <div class="bg-temple-stone p-6 rounded-lg mt-6">
-              <h4 class="font-heading text-xl font-bold mb-3 text-temple-navy">Conservation Efforts</h4>
-              <p class="text-gray-700">
-                The Archaeological Survey of India has undertaken careful conservation work to preserve the remaining murals, using specialized techniques to stabilize the plaster and pigments while maintaining their historical integrity.
               </p>
             </div>
           </div>

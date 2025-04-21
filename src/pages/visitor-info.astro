@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import VisitorInfo from '../components/VisitorInfo.astro';
+import GoogleMap from '../components/GoogleMap.astro';
 
 // Visitor Information Data
 const templeTimings = [
@@ -140,7 +141,8 @@ const faqs = [
   <Hero 
     title="Visitor Information" 
     subtitle="Everything you need to know for a memorable visit to Brihadeeswara Temple"
-    backgroundImage="/images/visitor-hero.jpg"
+    backgroundImage="https://t3.ftcdn.net/jpg/05/59/74/36/240_F_559743693_dAUFbSqvfH03wwPI8YmWWB5d9wc4yDJy.jpg"
+    height="h-[40vh]"
   />
   
   <section class="py-16 bg-white">
@@ -235,21 +237,20 @@ const faqs = [
             </div>
           </div>
           <div data-aos="fade-left">
-            <div class="h-96 rounded-lg overflow-hidden shadow-lg mb-6">
-              <!-- Google Maps Embed -->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5!2m3!1f0!2m0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582d1644b15%3A0xbed2ecd2e4ef1097!2sBrihadeeswara%20Temple!5e0!3m2!1sen!2sus!4v1619733420871!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div class="p-6 bg-temple-navy text-white rounded-lg">
-              <h3 class="font-heading text-xl font-bold mb-3 text-temple-gold">Temple Address</h3>
-              <address class="not-italic">
-                <p class="mb-2">Brihadeeswara Temple (Peruvudaiyar Kovil)</p>
-                <p class="mb-2">South Main Street, Balaganapathy Nagar</p>
-                <p class="mb-2">Thanjavur - 613001</p>
-                <p class="mb-2">Tamil Nadu, India</p>
-                <p class="mb-2">
-                  <a href="tel:+914362271799" class="text-temple-gold hover:text-white">Phone: +91 4362 271799</a>
-                </p>
-              </address>
+            <div class="mt-12">
+              <GoogleMap />
+              <div class="p-6 bg-temple-navy text-white rounded-lg mt-6">
+                <h3 class="font-heading text-xl font-bold mb-3 text-temple-gold">Temple Address</h3>
+                <address class="not-italic">
+                  <p class="mb-2">Brihadeeswara Temple (Peruvudaiyar Kovil)</p>
+                  <p class="mb-2">South Main Street, Balaganapathy Nagar</p>
+                  <p class="mb-2">Thanjavur - 613001</p>
+                  <p class="mb-2">Tamil Nadu, India</p>
+                  <p class="mb-2">
+                    <a href="tel:+914362271799" class="text-temple-gold hover:text-white">Phone: +91 4362 271799</a>
+                  </p>
+                </address>
+              </div>
             </div>
           </div>
         </div>

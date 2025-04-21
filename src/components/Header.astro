@@ -4,7 +4,7 @@ const navItems = [
   { href: '/about', text: 'About' },
   { href: '/history', text: 'History' },
   { href: '/architecture', text: 'Architecture' },
-  { href: '/visitor-info', text: 'Visitor Info' },
+  { href: '/visitor-info', text: 'Visitor Info', highlight: true },
   { href: '/gallery', text: 'Gallery' },
   { href: '/news', text: 'News' },
   { href: '/contact', text: 'Contact' }
@@ -70,7 +70,9 @@ const searchData = [
           <li>
             <a 
               href={item.href}
-              class="text-temple-navy hover:text-temple-red transition-colors duration-200 font-medium"
+              class={`text-temple-navy hover:text-temple-red transition-colors duration-200 font-medium ${
+                item.highlight ? 'bg-temple-red text-white px-4 py-2 rounded-full hover:bg-temple-brown hover:text-white' : ''
+              }`}
             >
               {item.text}
             </a>
@@ -86,7 +88,9 @@ const searchData = [
           <li>
             <a 
               href={item.href}
-              class="block py-2 px-4 text-temple-navy hover:bg-temple-stone rounded-lg transition-colors duration-200"
+              class={`block py-2 px-4 text-temple-navy hover:bg-temple-stone rounded-lg transition-colors duration-200 ${
+                item.highlight ? 'bg-temple-red text-white hover:bg-temple-brown' : ''
+              }`}
             >
               {item.text}
             </a>
@@ -121,17 +125,6 @@ const searchData = [
   }
 
   // Search functionality
-  const searchData = [
-    { title: 'Home', url: '/', content: 'Welcome to Brihadeeswara Temple, a UNESCO World Heritage site in Thanjavur, Tamil Nadu.' },
-    { title: 'About', url: '/about', content: 'Learn about the historical significance, architectural features, and cultural importance of the Brihadeeswara Temple.' },
-    { title: 'History', url: '/history', content: 'Explore the rich history from Raja Raja Chola I to present day, including construction timeline and cultural significance.' },
-    { title: 'Architecture', url: '/architecture', content: 'Discover architectural elements like Vimana, Nandi Mandapam, sculptures, and engineering marvels.' },
-    { title: 'Visitor Info', url: '/visitor-info', content: 'Temple timings, dress code, photography rules, accommodation, and travel information.' },
-    { title: 'Gallery', url: '/gallery', content: 'Visual collection of temple architecture, sculptures, festivals, and cultural events.' },
-    { title: 'News', url: '/news', content: 'Latest updates, events, and articles about Brihadeeswara Temple.' },
-    { title: 'Contact', url: '/contact', content: 'Get in touch with temple administration, location details, and contact information.' }
-  ];
-
   document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('site-search') as HTMLInputElement;
     const searchResults = document.getElementById('search-results');

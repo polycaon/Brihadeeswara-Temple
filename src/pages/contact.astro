@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import ContactForm from '../components/ContactForm.astro';
+import GoogleMap from '../components/GoogleMap.astro';
 ---
 
 <Layout 
@@ -12,8 +13,8 @@ import ContactForm from '../components/ContactForm.astro';
   <Hero 
     title="Contact Us" 
     subtitle="Get in touch with Brihadeeswara Temple administration"
-    backgroundImage="/images/contact-hero.jpg"
-    height="h-[60vh]"
+    backgroundImage="https://t3.ftcdn.net/jpg/05/59/74/36/240_F_559743693_dAUFbSqvfH03wwPI8YmWWB5d9wc4yDJy.jpg"
+    height="h-[40vh]"
   />
   
   <section class="py-16 bg-white">
@@ -118,47 +119,19 @@ import ContactForm from '../components/ContactForm.astro';
           </div>
           
           <div class="mt-12">
-            <div class="h-64 rounded-lg overflow-hidden shadow-lg mb-6">
-              <!-- Google Maps Embed -->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5!2m3!1f0!2m0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582d1644b15%3A0xbed2ecd2e4ef1097!2sBrihadeeswara%20Temple!5e0!3m2!1sen!2sus!4v1619733420871!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <GoogleMap height="h-64" />
+            <div class="p-6 bg-temple-navy text-white rounded-lg mt-6">
+              <h3 class="font-heading text-xl font-bold mb-3 text-temple-gold">Temple Address</h3>
+              <address class="not-italic">
+                <p class="mb-2">Brihadeeswara Temple (Peruvudaiyar Kovil)</p>
+                <p class="mb-2">South Main Street, Balaganapathy Nagar</p>
+                <p class="mb-2">Thanjavur - 613001</p>
+                <p class="mb-2">Tamil Nadu, India</p>
+                <p class="mb-2">
+                  <a href="tel:+914362271799" class="text-temple-gold hover:text-white">Phone: +91 4362 271799</a>
+                </p>
+              </address>
             </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="mt-16">
-        <SectionTitle 
-          title="Frequently Asked Contact Questions"
-          subtitle="Quick answers to common queries about contacting us"
-        />
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up">
-          <div class="bg-white p-6 rounded-lg shadow-md temple-card">
-            <h3 class="font-heading text-xl font-bold mb-3 text-temple-navy">How quickly will I receive a response to my inquiry?</h3>
-            <p class="text-gray-700">
-              We aim to respond to all inquiries within 48 hours during business days. For urgent matters, please call our office directly.
-            </p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-md temple-card">
-            <h3 class="font-heading text-xl font-bold mb-3 text-temple-navy">Can I book a guided tour of the temple?</h3>
-            <p class="text-gray-700">
-              Yes, guided tours can be arranged by contacting our office at least 24 hours in advance. Please use the contact form to specify your preferred date, time, and group size.
-            </p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-md temple-card">
-            <h3 class="font-heading text-xl font-bold mb-3 text-temple-navy">How can I get permission for professional photography?</h3>
-            <p class="text-gray-700">
-              Professional photography/filming requires prior permission. Please contact our administrative office with details of your project at least two weeks in advance.
-            </p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-md temple-card">
-            <h3 class="font-heading text-xl font-bold mb-3 text-temple-navy">Can I make donations to support temple maintenance?</h3>
-            <p class="text-gray-700">
-              Yes, donations are welcome and can be made directly at the temple office. For international donations, please contact us for wire transfer details.
-            </p>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import SectionTitle from '../components/SectionTitle.astro';
+import GoogleMap from '../components/GoogleMap.astro';
 
 const keyFacts = [
   { label: "Temple Name", value: "Brihadeeswara Temple / Thanjavur Peruvudaiyar Kovil" },
@@ -16,13 +17,14 @@ const keyFacts = [
 ---
 
 <Layout 
-  title="About Brihadeeswara Temple" 
+  title="About the Temple" 
   description="Learn about the historical significance, architectural features, and cultural importance of the Brihadeeswara Temple in Thanjavur, Tamil Nadu."
 >
   <Hero 
-    title="About Brihadeeswara Temple" 
-    subtitle="Discover the magnificence of one of India's greatest architectural treasures"
-    backgroundImage="/images/about-hero.jpg"
+    title="About the Temple" 
+    subtitle="Discover the magnificence of India's greatest architectural treasures"
+    backgroundImage="https://t3.ftcdn.net/jpg/05/59/74/36/240_F_559743693_dAUFbSqvfH03wwPI8YmWWB5d9wc4yDJy.jpg"
+    height="h-[40vh]"
   />
   
   <section class="py-16 bg-white">
@@ -46,7 +48,7 @@ const keyFacts = [
         </div>
         <div class="relative" data-aos="fade-left">
           <img 
-            src="/images/about-temple.jpg" 
+            src="https://cdn.thedecorjournalindia.com/wp-content/uploads/2022/03/Brihadeshwara-Temple-A-structure-conceived-with-grace-and-Magnificence-1.jpg" 
             alt="Brihadeeswara Temple Architecture" 
             class="w-full rounded-lg shadow-lg"
           />
@@ -133,10 +135,7 @@ const keyFacts = [
             </a>
           </div>
           <div data-aos="fade-left">
-            <div class="h-96 rounded-lg overflow-hidden shadow-lg">
-              <!-- Replace the iframe with the actual Google Maps embed code -->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5!2m3!1f0!2m0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582d1644b15%3A0xbed2ecd2e4ef1097!2sBrihadeeswara%20Temple!5e0!3m2!1sen!2sus!4v1619733420871!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+            <GoogleMap />
           </div>
         </div>
       </div>
