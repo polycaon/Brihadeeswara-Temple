@@ -8,6 +8,6 @@
     { "src": "/(.*)", "dest": "/404.html" }
   ],
   "env": {
-    "NODE_VERSION": "18"
+    "NODE_VERSION": "18.x"
   }
 }

@@ -6,11 +6,6 @@ export default defineConfig({
   site: 'https://brihadeeswaratemple.com',
   output: 'static',
   build: {
-    format: 'directory'
-  },
-  vite: {
-    ssr: {
-      noExternal: ['@supabase/supabase-js']
-    }
+    assets: '_assets'
   }
 });
