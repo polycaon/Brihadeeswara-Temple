@@ -7,9 +7,15 @@ export interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  canonicalURL?: string;
 }
 
-const { title, description = "Discover the magnificence of Brihadeeswara Temple, a UNESCO World Heritage site in Thanjavur, India. Learn about its history, architecture, and plan your visit.", ogImage = "/images/og-image.jpg" } = Astro.props;
+const { 
+  title, 
+  description = "Discover the magnificence of Brihadeeswara Temple, a UNESCO World Heritage site in Thanjavur, India. Learn about its history, architecture, and plan your visit.", 
+  ogImage = "https://t3.ftcdn.net/jpg/05/59/74/36/240_F_559743693_dAUFbSqvfH03wwPI8YmWWB5d9wc4yDJy.jpg",
+  canonicalURL = Astro.url
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -20,26 +26,22 @@ const { title, description = "Discover the magnificence of Brihadeeswara Temple,
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-T9BSX7V17F"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-T9BSX7V17F');
-    </script>
+    <!-- SEO Meta Tags -->
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Brihadeeswara Temple" />
+    <meta name="keywords" content="Brihadeeswara Temple, Thanjavur, UNESCO World Heritage, Chola architecture, Tamil Nadu temples, Raja Raja Chola, Hindu temple, South Indian architecture" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImage} />
