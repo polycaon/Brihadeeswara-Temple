@@ -5,7 +5,7 @@ import SectionTitle from '../../components/SectionTitle.astro';
 import BlogCard from '../../components/BlogCard.astro';
 import { getBlogPosts } from '../../lib/supabase';
 
-const blogPosts = await getBlogPosts();
+const posts = await getBlogPosts();
 ---
 
 <Layout 
@@ -27,7 +27,7 @@ const blogPosts = await getBlogPosts();
       />
       
       <div class="grid gap-6">
-        {blogPosts.map(post => (
+        {posts.map(post => (
           <BlogCard 
             title={post.title}
             url={`/news/${post.slug}`}

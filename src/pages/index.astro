@@ -5,7 +5,7 @@ import SectionTitle from '../components/SectionTitle.astro';
 import BlogCard from '../components/BlogCard.astro';
 import { getBlogPosts } from '../lib/supabase';
 
-const blogPosts = await getBlogPosts();
+const posts = await getBlogPosts();
 ---
 
 <Layout title="Brihadeeswara Temple - UNESCO World Heritage Site in Thanjavur, India">
@@ -143,7 +143,7 @@ const blogPosts = await getBlogPosts();
       />
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {blogPosts.slice(0, 3).map((post, index) => (
+        {posts.slice(0, 3).map((post, index) => (
           <div data-aos="fade-up" data-aos-delay={index * 100}>
             <BlogCard 
               title={post.title}
