@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import { getBlogPosts } from '../../utils/sheets';
+
+const posts = await getBlogPosts();
+---
+
+<Layout 
+  title="Temple Blog" 
+  description="Read about the history, architecture, and cultural significance of Brihadeeswara Temple through our blog articles."
+>
+  <Hero 
+    title="Temple Blog" 
+    subtitle="Stories, insights, and knowledge about Brihadeeswara Temple"
+    backgroundImage="/images/blog/blog-architecture.jpg"
+    height="h-[40vh]"
+  />
+  
+  <section class="py-16 bg-white">
+    <div class="temple-container">
+      <SectionTitle 
+        title="Latest Articles"
+        subtitle="Explore our collection of articles about the temple's history, architecture, and cultural significance"
+      />
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <article class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+            <a href={`/blog/${post.slug}`} class="block">
+              <img 
+                src={post.image_url} 
+                alt={post.title} 
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <span class="text-sm text-temple-red">{post.category}</span>
+                  <span class="mx-2 text-gray-300">•</span>
+                  <time class="text-sm text-gray-500">
+                    {new Date(post.date).toLocaleDateString('en-US', { 
+                      month: 'long',
+                      day: 'numeric',
+                      year: 'numeric'
+                    })}
+                  </time>
+                </div>
+                <h2 class="font-heading text-xl font-bold mb-2 text-temple-navy hover:text-temple-red transition-colors duration-200">
+                  {post.title}
+                </h2>
+                <p class="text-gray-600 mb-4">{post.excerpt}</p>
+                <span class="text-temple-red font-medium hover:text-temple-brown transition-colors duration-200">
+                  Read More →
+                </span>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

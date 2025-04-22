@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import { getBlogPosts, getBlogPostBySlug } from '../../utils/sheets';
+
+export async function getStaticPaths() {
+  const posts = await getBlogPosts();
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<Layout 
+  title={post.title}
+  description={post.excerpt}
+  ogImage={post.image_url}
+>
+  <Hero 
+    title={post.title}
+    subtitle={post.category}
+    backgroundImage={post.image_url}
+    height="h-[40vh]"
+  />
+  
+  <article class="py-16 bg-white">
+    <div class="temple-container max-w-4xl">
+      <div class="prose prose-lg mx-auto">
+        <div class="flex items-center mb-8 text-gray-600">
+          <time datetime={post.date}>
+            {new Date(post.date).toLocaleDateString('en-US', { 
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </time>
+          <span class="mx-2">•</span>
+          <span>{post.category}</span>
+        </div>
+        
+        <div set:html={post.content} />
+      </div>
+    </div>
+  </article>
+</Layout>

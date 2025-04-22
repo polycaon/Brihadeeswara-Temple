@@ -16,6 +16,7 @@
     "@shikijs/core": "^1.1.7",
     "aos": "^2.3.4",
     "astro": "4.2.0",
+    "google-spreadsheet": "^4.1.4",
     "photoswipe": "^5.4.3",
     "shiki": "^1.1.7",
     "swiper": "^10.0.0",
