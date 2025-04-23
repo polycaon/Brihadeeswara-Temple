@@ -1,0 +1,61 @@
+/* empty css                          */
+import { c as createComponent, e as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../astro_E6MCQwvx.mjs';
+import 'kleur/colors';
+import 'clsx';
+import { $ as $$Hero, a as $$Layout } from './404_2H4Te3PH.mjs';
+import { $ as $$SectionTitle } from './about_By3pWU_7.mjs';
+
+const $$History = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "History & Significance", "description": "Explore the rich history and cultural significance of Brihadeeswara Temple, from its construction under Raja Raja Chola I to its UNESCO World Heritage status." }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Hero", $$Hero, { "title": "History & Significance", "subtitle": "A journey through time: exploring the legacy of the Chola dynasty's greatest architectural achievement", "backgroundImage": "https://t3.ftcdn.net/jpg/05/59/74/36/240_F_559743693_dAUFbSqvfH03wwPI8YmWWB5d9wc4yDJy.jpg", "height": "h-[40vh]" })} ${maybeRenderHead()}<section class="py-16 bg-white"> <div class="temple-container"> <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16"> <div class="lg:col-span-2" data-aos="fade-right"> ${renderComponent($$result2, "SectionTitle", $$SectionTitle, { "title": "The Visionary Founder", "alignment": "left" })} <div class="flex gap-6 mb-8"> <div class="mt-1 text-temple-gold"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10"> <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"></path> </svg> </div> <div> <h3 class="font-heading text-2xl font-bold mb-3 text-temple-navy">Raja Raja Chola I (985-1014 CE)</h3> <p class="text-gray-700 mb-4">
+Raja Raja I (born Arulmozhi Varman) was one of the most powerful kings of the Chola dynasty. During his reign, the Chola Empire expanded tremendously, encompassing most of South India and parts of Sri Lanka and the Maldives.
+</p> <p class="text-gray-700">
+Beyond being a skilled military commander, Raja Raja I was a patron of arts, architecture, and literature. The Brihadeeswara Temple stands as his greatest architectural legacy, showcasing not only his devotion to Lord Shiva but also his vision to create a monument that would symbolize the might and cultural sophistication of the Chola Empire.
+</p> </div> </div> <div class="flex gap-6"> <div class="mt-1 text-temple-gold"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path> </svg> </div> <div> <h3 class="font-heading text-2xl font-bold mb-3 text-temple-navy">Construction Timeline</h3> <p class="text-gray-700 mb-4">
+The construction of Brihadeeswara Temple began around 1003 CE and was completed by 1010 CE, taking approximately seven years. This was remarkably efficient for a structure of its size and complexity, especially considering the technological limitations of the era.
+</p> <p class="text-gray-700">
+According to inscriptions, the temple was consecrated in the 25th regnal year of Raja Raja Chola I with an elaborate ceremony. The temple was originally called "Rajarajeswaram" after its founder, though it later became known as Brihadeeswara Temple (the temple of the Great Lord Shiva).
+</p> </div> </div> </div> <div data-aos="fade-left"> <img src="https://www.esamskriti.com/essays/docfile/11_6796.jpg" alt="Raja Raja Chola I" class="w-full rounded-lg shadow-lg mb-6"> <div class="bg-temple-stone p-6 rounded-lg"> <h3 class="font-heading text-xl font-bold mb-3 text-temple-navy">Did You Know?</h3> <p class="text-gray-700 mb-3">
+The temple was built to celebrate Raja Raja's military victories, particularly the successful northern campaigns.
+</p> <p class="text-gray-700 mb-3">
+Raja Raja Chola I donated substantial gold and silver to the temple and made arrangements for its maintenance by assigning revenue from several villages.
+</p> <p class="text-gray-700">
+The king's name "Raja Raja" translates to "King of Kings," reflecting his status as one of the most powerful monarchs of his time.
+</p> </div> </div> </div> <div class="mb-16"> ${renderComponent($$result2, "SectionTitle", $$SectionTitle, { "title": "Historical Timeline", "subtitle": "The journey of Brihadeeswara Temple through centuries" })} <div class="relative border-l-4 border-temple-gold ml-6 pl-8 py-4"> <div class="mb-12 relative" data-aos="fade-up"> <div class="absolute -left-14 top-0 w-10 h-10 bg-temple-gold text-white rounded-full flex items-center justify-center"> <span class="font-bold">1</span> </div> <h3 class="font-heading text-2xl font-bold mb-2 text-temple-navy">1003-1010 CE: Construction Period</h3> <p class="text-gray-700">
+Raja Raja Chola I commissioned the temple, and it was built over a seven-year period. The temple was designed and executed by the architect Kunjara Mallan Raja Raja Perunthachchan, as mentioned in inscriptions.
+</p> </div> <div class="mb-12 relative" data-aos="fade-up" data-aos-delay="100"> <div class="absolute -left-14 top-0 w-10 h-10 bg-temple-gold text-white rounded-full flex items-center justify-center"> <span class="font-bold">2</span> </div> <h3 class="font-heading text-2xl font-bold mb-2 text-temple-navy">1010 CE: Consecration</h3> <p class="text-gray-700 mb-3">
+The temple was consecrated and officially named "Rajarajeswaram" after its founder. The inauguration was marked by grand ceremonies and rituals, with the king himself participating in the festivities.
+</p> </div> <div class="mb-12 relative" data-aos="fade-up" data-aos-delay="200"> <div class="absolute -left-14 top-0 w-10 h-10 bg-temple-gold text-white rounded-full flex items-center justify-center"> <span class="font-bold">3</span> </div> <h3 class="font-heading text-2xl font-bold mb-2 text-temple-navy">13th-17th Century: Various Rulers</h3> <p class="text-gray-700 mb-3">
+After the decline of the Chola Empire, the temple came under the control of various dynasties including the Pandyas, the Delhi Sultanate, the Vijayanagara Empire, and the Madurai Nayaks. Each ruler contributed to the temple's maintenance and added their own architectural elements.
+</p> </div> <div class="mb-12 relative" data-aos="fade-up" data-aos-delay="300"> <div class="absolute -left-14 top-0 w-10 h-10 bg-temple-gold text-white rounded-full flex items-center justify-center"> <span class="font-bold">4</span> </div> <h3 class="font-heading text-2xl font-bold mb-2 text-temple-navy">17th-19th Century: Maratha Period</h3> <p class="text-gray-700 mb-3">
+The Marathas ruled Thanjavur from 1674 to 1855. They were great patrons of the temple and made significant contributions to its upkeep and the surrounding infrastructure. The Maratha kings renovated parts of the temple and built the Thanjavur Palace nearby.
+</p> </div> <div class="mb-12 relative" data-aos="fade-up" data-aos-delay="400"> <div class="absolute -left-14 top-0 w-10 h-10 bg-temple-gold text-white rounded-full flex items-center justify-center"> <span class="font-bold">5</span> </div> <h3 class="font-heading text-2xl font-bold mb-2 text-temple-navy">1987: UNESCO Recognition</h3> <p class="text-gray-700 mb-3">
+The temple was recognized as a UNESCO World Heritage Site as part of the "Great Living Chola Temples." This international recognition highlighted the temple's outstanding cultural, architectural, and historical significance.
+</p> </div> <div class="relative" data-aos="fade-up" data-aos-delay="500"> <div class="absolute -left-14 top-0 w-10 h-10 bg-temple-gold text-white rounded-full flex items-center justify-center"> <span class="font-bold">6</span> </div> <h3 class="font-heading text-2xl font-bold mb-2 text-temple-navy">Present Day: Living Heritage</h3> <p class="text-gray-700 mb-3">
+The temple continues to function as an active place of worship, maintaining its ancient rituals and traditions. It remains under the administration of the Tamil Nadu Hindu Religious and Charitable Endowments Department, which oversees its preservation and religious activities.
+</p> <p class="text-gray-700">
+Today, Brihadeeswara Temple stands not only as a testament to the artistic and architectural genius of the Chola period but also as a living cultural institution that connects modern Indians to their rich heritage.
+</p> </div> </div> </div> <div> ${renderComponent($$result2, "SectionTitle", $$SectionTitle, { "title": "Cultural Significance", "subtitle": "Beyond its architectural splendor, Brihadeeswara Temple holds profound cultural and religious significance." })} <div class="grid grid-cols-1 md:grid-cols-2 gap-8"> <div data-aos="fade-right"> <h3 class="font-heading text-2xl font-bold mb-4 text-temple-navy">Religious Importance</h3> <p class="text-gray-700 mb-4">
+As a Shiva temple, Brihadeeswara is a significant pilgrimage site for Shaivites (devotees of Lord Shiva). The main deity is Brihadeeswara (the Great Lord), represented by a large Lingam in the sanctum sanctorum.
+</p> <p class="text-gray-700 mb-4">
+The temple also houses shrines to Vishnu, Subrahmanya, Ganesha, Nataraj, and goddess Parvati, making it an important place of worship for followers of various Hindu traditions.
+</p> <p class="text-gray-700">
+The continuous tradition of worship for over a millennium makes it a "living temple" where ancient rituals and practices are preserved and continued to this day.
+</p> </div> <div data-aos="fade-left"> <h3 class="font-heading text-2xl font-bold mb-4 text-temple-navy">Artistic & Historical Value</h3> <p class="text-gray-700 mb-4">
+The temple is a treasure trove of Chola art, with thousands of sculptures and intricate carvings depicting various deities, mythological scenes, and daily life during the Chola period.
+</p> <p class="text-gray-700 mb-4">
+The walls of the temple contain numerous inscriptions in Tamil and Grantha scripts, providing valuable historical information about the Chola administration, economy, social structure, and religious practices.
+</p> <p class="text-gray-700">
+The temple's murals, though partially damaged, are among the rare surviving examples of Chola painting and offer a glimpse into the visual art traditions of medieval South India.
+</p> </div> </div> <div class="mt-8 p-6 bg-temple-stone rounded-lg" data-aos="fade-up"> <h3 class="font-heading text-2xl font-bold mb-4 text-temple-navy">Legacy</h3> <p class="text-gray-700 mb-4">
+Brihadeeswara Temple has influenced temple architecture throughout South India, setting standards for proportion, layout, and sculptural decoration that were emulated in later temples.
+</p> <p class="text-gray-700 mb-4">
+The temple represents the zenith of Chola artistic expression and stands as a symbol of Tamil cultural identity and achievement. It continues to inspire artists, architects, and cultural enthusiasts worldwide.
+</p> <p class="text-gray-700">
+As a UNESCO World Heritage Site, the temple is recognized globally for its "outstanding universal value" and is protected for future generations to appreciate and study.
+</p> </div> </div> </div> </section> ` })}`;
+}, "/home/project/src/pages/history.astro", void 0);
+
+const $$file = "/home/project/src/pages/history.astro";
+const $$url = "/history";
+
+export { $$History as default, $$file as file, $$url as url };

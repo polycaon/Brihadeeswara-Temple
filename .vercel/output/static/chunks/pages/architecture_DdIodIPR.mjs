@@ -1,0 +1,45 @@
+/* empty css                          */
+import { c as createComponent, e as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../astro_E6MCQwvx.mjs';
+import 'kleur/colors';
+import 'clsx';
+import { $ as $$Hero, a as $$Layout } from './404_2H4Te3PH.mjs';
+import { $ as $$SectionTitle } from './about_By3pWU_7.mjs';
+
+const $$Architecture = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Temple Architecture", "description": "Discover the architectural marvels of Brihadeeswara Temple, from its towering vimana to intricate sculptures and engineering innovations." }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Hero", $$Hero, { "title": "Temple Architecture", "subtitle": "Explore the Dravidian architectural brilliance that has stood the test of time", "backgroundImage": "https://t3.ftcdn.net/jpg/05/59/74/36/240_F_559743693_dAUFbSqvfH03wwPI8YmWWB5d9wc4yDJy.jpg", "height": "h-[40vh]" })} ${maybeRenderHead()}<section class="py-16 bg-white"> <div class="temple-container"> ${renderComponent($$result2, "SectionTitle", $$SectionTitle, { "title": "Architectural Masterpiece", "subtitle": "The Brihadeeswara Temple exemplifies the pinnacle of Dravidian architecture under the Chola dynasty, combining engineering innovation with artistic excellence." })} <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16"> <div data-aos="fade-right"> <h3 class="font-heading text-2xl font-bold mb-4 text-temple-navy">Engineering Marvel</h3> <p class="text-gray-700 mb-4">
+Built entirely of granite, the temple utilized over 130,000 tons of the stone, transported from quarries over 60 kilometers away. This massive logistical operation was accomplished without modern equipment, using only manpower, elephants, and wooden rollers.
+</p> <p class="text-gray-700 mb-4">
+The most remarkable aspect of the temple's construction is that it was built without the use of mortar. The granite blocks are precisely cut and fitted together using an interlocking system, demonstrating the advanced engineering knowledge of the era.
+</p> <p class="text-gray-700">
+The temple's foundation is built on a solid granite base that rises 5 feet above ground level, providing a sturdy platform for the massive structure. Despite standing for over a millennium and experiencing numerous earthquakes, the temple has remained structurally sound.
+</p> </div> <div data-aos="fade-left"> <img src="https://scontent.fblr8-1.fna.fbcdn.net/v/t1.6435-9/190753654_117615400483348_7235335388301101622_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kGqW1lNM1xUQ7kNvwHSvsKR&_nc_oc=Adn-iU01tkMrUGPAcKFan-EjIS58USw7hq5ARrDrzC_4XJkFcXZp0V89OwdmoMJqnNc&_nc_zt=23&_nc_ht=scontent.fblr8-1.fna&_nc_gid=SxY_m5rTWRu0cyBQUKgh0A&oh=00_AfEgm8VNYK_2adsl9mPEGJAHKdsOX22qgJDKuMs9shURfg&oe=682D4564" alt="Engineering Details of the Temple" class="w-full rounded-lg shadow-lg"> </div> </div> <div class="mb-16"> ${renderComponent($$result2, "SectionTitle", $$SectionTitle, { "title": "Key Architectural Elements", "subtitle": "Explore the distinctive features that make Brihadeeswara Temple an architectural wonder" })} <div class="mb-12"> <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center"> <div class="lg:col-span-2 order-2 lg:order-1" data-aos="fade-right"> <h3 class="font-heading text-2xl font-bold mb-4 text-temple-navy">Vimana (Central Tower)</h3> <p class="text-gray-700 mb-4">
+The central tower or vimana of Brihadeeswara Temple rises to a height of 216 feet (66 meters), making it one of the tallest temple towers in India. The thirteen-tiered pyramidal structure is topped with a massive monolithic cupola (kumbam) that weighs approximately 80 tons.
+</p> <p class="text-gray-700 mb-4">
+What makes this achievement even more remarkable is that the engineers had to devise a way to lift this massive stone to the top of the tower without modern equipment. It is believed that they used a specially constructed 6.44 km (4 mile) long ramp to gradually move the stone to its position.
+</p> <p class="text-gray-700">
+The vimana is designed to cast no shadow at noon during the equinoxes, showcasing the precision of ancient Tamil astronomy and architectural planning.
+</p> </div> <div class="order-1 lg:order-2" data-aos="fade-left"> <img src="https://qph.cf2.quoracdn.net/main-qimg-89fdfa39aab95e8ce18ad1375d3a30a5" alt="Vimana (Temple Tower) Details" class="w-full rounded-lg shadow-lg"> </div> </div> </div> <div class="mb-12"> <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center"> <div data-aos="fade-right"> <img src="https://qph.cf2.quoracdn.net/main-qimg-354a70e4ee98aacf3c861d0f7a94fa67-lq" alt="Nandi (Sacred Bull) Details" class="w-full rounded-lg shadow-lg"> </div> <div class="lg:col-span-2" data-aos="fade-left"> <h3 class="font-heading text-2xl font-bold mb-4 text-temple-navy">Nandi Mandapam</h3> <p class="text-gray-700 mb-4">
+Facing the main shrine is a pavilion housing a monolithic statue of Nandi, the sacred bull that serves as Lord Shiva's vahana (vehicle). The statue is carved from a single block of granite and measures approximately 6 meters long and 3.7 meters high.
+</p> <p class="text-gray-700 mb-4">
+The Nandi statue is positioned directly in line with the sanctum sanctorum, symbolically gazing eternally at Lord Shiva. This alignment is a common feature in Shiva temples, but the scale and craftsmanship of the Brihadeeswara Nandi are exceptional.
+</p> <p class="text-gray-700">
+The statue is known for its perfect proportions and fine details, showcasing the skill of Chola sculptors. Every evening, the Nandi is ritually anointed with oil, helping to preserve the stone and maintain its polished appearance over the centuries.
+</p> </div> </div> </div> <div class="mb-12"> <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center"> <div class="lg:col-span-2 order-2 lg:order-1" data-aos="fade-right"> <h3 class="font-heading text-2xl font-bold mb-4 text-temple-navy">Garbhagriha (Sanctum Sanctorum)</h3> <p class="text-gray-700 mb-4">
+The heart of the temple is the garbhagriha or sanctum sanctorum, which houses a massive Lingam (the aniconic representation of Lord Shiva). The Lingam is approximately 12 feet tall and is one of the largest in India.
+</p> <p class="text-gray-700 mb-4">
+The sanctum is designed in accordance with ancient Agamic texts, with perfect proportions that are believed to create a powerful spiritual energy. The space is relatively austere compared to the elaborate exterior, focusing attention on the deity.
+</p> <p class="text-gray-700">
+The inner walls of the sanctum were originally adorned with frescoes, though many have deteriorated over time. The few that remain provide valuable insights into Chola-era painting techniques and iconography.
+</p> </div> <div class="order-1 lg:order-2" data-aos="fade-left"> <img src="https://qph.cf2.quoracdn.net/main-qimg-8c9659c89e509b734a1be8773d9106d6-lq" alt="Sanctum Sanctorum" class="w-full rounded-lg shadow-lg"> </div> </div> </div> <div> <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center"> <div data-aos="fade-right"> <img src="https://qph.cf2.quoracdn.net/main-qimg-cd7b5d5b01d88f2945a48dd1913af8f6-lq" alt="Temple Gopuram (Gateway)" class="w-full rounded-lg shadow-lg"> </div> <div class="lg:col-span-2" data-aos="fade-left"> <h3 class="font-heading text-2xl font-bold mb-4 text-temple-navy">Gopurams & Prakarams</h3> <p class="text-gray-700 mb-4">
+The temple complex is surrounded by two concentric rectangular enclosures (prakarams) with massive walls. These enclosures are entered through ornate gateways known as gopurams.
+</p> <p class="text-gray-700 mb-4">
+Unlike later Tamil temples where the gopurams are taller than the central vimana, at Brihadeeswara, the vimana remains the tallest structure, emphasizing the primacy of the main shrine. This architectural hierarchy is characteristic of early Chola temple design.
+</p> <p class="text-gray-700">
+The outer prakaram houses numerous sub-shrines dedicated to various deities, including the Pancha Lingams (five lingams representing the five elements), Subrahmanya, Ganapati, and the Ashta-dikpaalakas (eight guardians of the directions).
+</p> </div> </div> </div> </div> </div> </section> ` })}`;
+}, "/home/project/src/pages/architecture.astro", void 0);
+
+const $$file = "/home/project/src/pages/architecture.astro";
+const $$url = "/architecture";
+
+export { $$Architecture as default, $$file as file, $$url as url };

@@ -1,0 +1,79 @@
+/* empty css                          */
+import { c as createComponent, b as createAstro, m as maybeRenderHead, a as addAttribute, r as renderTemplate, e as renderComponent } from '../astro_E6MCQwvx.mjs';
+import 'kleur/colors';
+import { $ as $$Hero, a as $$Layout } from './404_2H4Te3PH.mjs';
+import 'clsx';
+/* empty css                          */
+
+const $$Astro$1 = createAstro();
+const $$SectionTitle = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
+  Astro2.self = $$SectionTitle;
+  const {
+    title,
+    subtitle,
+    alignment = "center"
+  } = Astro2.props;
+  const textAlign = {
+    left: "text-left",
+    center: "text-center",
+    right: "text-right"
+  };
+  const alignClass = textAlign[alignment];
+  return renderTemplate`${maybeRenderHead()}<div${addAttribute(`mb-12 ${alignClass}`, "class")} data-aos="fade-up" data-astro-cid-azbpcp4f> <h2${addAttribute(`font-heading text-3xl md:text-4xl text-temple-navy relative inline-block section-title ${alignment === "center" ? "section-title-center" : alignment === "right" ? "section-title-right" : ""}`, "class")} data-astro-cid-azbpcp4f> ${title} </h2> ${subtitle && renderTemplate`<p class="text-gray-600 mt-4 max-w-3xl mx-auto" data-astro-cid-azbpcp4f>${subtitle}</p>`} </div> `;
+}, "/home/project/src/components/SectionTitle.astro", void 0);
+
+const $$Astro = createAstro();
+const $$GoogleMap = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$GoogleMap;
+  const { height = "h-96" } = Astro2.props;
+  return renderTemplate`${maybeRenderHead()}<div${addAttribute(`${height} rounded-lg overflow-hidden shadow-lg`, "class")}> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.7168437586604!2d79.13097587499726!3d10.782866989362325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baab89cea453039%3A0x11f39c6ce7a0b8c4!2sBrihadeeshwara%20Temple!5e0!3m2!1sen!2sin!4v1682043271346!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe> </div>`;
+}, "/home/project/src/components/GoogleMap.astro", void 0);
+
+const $$About = createComponent(($$result, $$props, $$slots) => {
+  const keyFacts = [
+    { label: "Temple Name", value: "Brihadeeswara Temple / Thanjavur Peruvudaiyar Kovil" },
+    { label: "Also Known As", value: "Rajarajeswaram, The Big Temple" },
+    { label: "Dedicated To", value: "Lord Shiva (as Brihadeeswara or Peruvudaiyar)" },
+    { label: "Built By", value: "Raja Raja Chola I" },
+    { label: "Construction Period", value: "1003-1010 CE (during the Chola dynasty)" },
+    { label: "Location", value: "Thanjavur, Tamil Nadu, India" },
+    { label: "Heritage Status", value: "UNESCO World Heritage Site (1987)" },
+    { label: "Architecture Style", value: "Dravidian Architecture" }
+  ];
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "About the Temple", "description": "Learn about the historical significance, architectural features, and cultural importance of the Brihadeeswara Temple in Thanjavur, Tamil Nadu." }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Hero", $$Hero, { "title": "About the Temple", "subtitle": "Discover the magnificence of India's greatest architectural treasures", "backgroundImage": "https://t3.ftcdn.net/jpg/05/59/74/36/240_F_559743693_dAUFbSqvfH03wwPI8YmWWB5d9wc4yDJy.jpg", "height": "h-[40vh]" })} ${maybeRenderHead()}<section class="py-16 bg-white"> <div class="temple-container"> ${renderComponent($$result2, "SectionTitle", $$SectionTitle, { "title": "An Architectural Masterpiece", "subtitle": "Brihadeeswara Temple stands as a monumental tribute to the vision of Raja Raja Chola I and the expertise of ancient Tamil architects and craftsmen." })} <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12"> <div data-aos="fade-right"> <p class="text-gray-700 mb-4">
+Brihadeeswara Temple, a masterpiece of Dravidian architecture, is one of India's most prized architectural treasures. Built in the early 11th century, it celebrates the power and artistic vision of the Chola Empire.
+</p> <p class="text-gray-700 mb-4">
+The temple is renowned for its grand scale, architectural excellence, and the intricate sculptures that adorn its walls. The vimana (tower) rises to a height of 216 feet (66 meters), making it one of the tallest of its kind in the world.
+</p> <p class="text-gray-700">
+What makes this temple even more remarkable is that it was built using interlocking techniques without the use of mortar, showcasing the advanced engineering knowledge of the Chola period. The entire structure is made of granite, with some stones weighing up to 80 tons having been transported from quarries over 60 kilometers away.
+</p> </div> <div class="relative" data-aos="fade-left"> <img src="https://cdn.thedecorjournalindia.com/wp-content/uploads/2022/03/Brihadeshwara-Temple-A-structure-conceived-with-grace-and-Magnificence-1.jpg" alt="Brihadeeswara Temple Architecture" class="w-full rounded-lg shadow-lg"> <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg max-w-xs"> <p class="font-heading text-temple-navy">The entire temple complex is built on a granite foundation that rises 5 feet above ground level.</p> </div> </div> </div> <div class="mb-12" data-aos="fade-up"> ${renderComponent($$result2, "SectionTitle", $$SectionTitle, { "title": "Key Facts", "alignment": "left" })} <div class="bg-temple-stone rounded-lg overflow-hidden"> <div class="overflow-x-auto"> <table class="w-full text-left"> <tbody> ${keyFacts.map((fact, index) => renderTemplate`<tr${addAttribute(index % 2 === 0 ? "bg-white" : "bg-temple-stone", "class")}> <td class="py-4 px-6 font-semibold text-temple-navy">${fact.label}</td> <td class="py-4 px-6 text-gray-700">${fact.value}</td> </tr>`)} </tbody> </table> </div> </div> </div> <div class="mb-12"> ${renderComponent($$result2, "SectionTitle", $$SectionTitle, { "title": "Legacy & Significance", "alignment": "left" })} <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up"> <h3 class="font-heading text-xl font-bold mb-3 text-temple-navy">Cultural Icon</h3> <p class="text-gray-700">
+The temple has become a symbol of Tamil pride and cultural identity, representing the artistic and architectural achievements of the Tamil people.
+</p> </div> <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100"> <h3 class="font-heading text-xl font-bold mb-3 text-temple-navy">Religious Center</h3> <p class="text-gray-700">
+For over a millennium, Brihadeeswara Temple has remained an active center of worship, continuing ancient rituals and traditions without interruption.
+</p> </div> <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200"> <h3 class="font-heading text-xl font-bold mb-3 text-temple-navy">Historical Record</h3> <p class="text-gray-700">
+The temple's walls contain inscriptions that provide valuable information about the political, economic, and social systems of the Chola period.
+</p> </div> </div> </div> <div> ${renderComponent($$result2, "SectionTitle", $$SectionTitle, { "title": "Location", "alignment": "left" })} <div class="grid grid-cols-1 lg:grid-cols-2 gap-8"> <div data-aos="fade-right"> <p class="text-gray-700 mb-4">
+Brihadeeswara Temple is located in the city of Thanjavur (formerly known as Tanjore) in Tamil Nadu, southern India. The temple sits at the center of the city, serving as its cultural and spiritual heart.
+</p> <p class="text-gray-700 mb-4">
+The temple complex covers an area of approximately 25 acres (10 hectares), enclosed by massive walls. The main entrance to the temple faces east, which is traditional for Shiva temples.
+</p> <p class="text-gray-700 mb-4">
+Thanjavur itself is accessible by:
+</p> <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6"> <li><span class="font-semibold">Air:</span> The nearest airport is Tiruchirapalli (Trichy) International Airport, about 55 km away</li> <li><span class="font-semibold">Rail:</span> Thanjavur Junction is well-connected to major cities like Chennai, Madurai, and Trichy</li> <li><span class="font-semibold">Road:</span> Well-connected by buses and highways to all major cities in Tamil Nadu</li> </ul> <a href="/visitor-info" class="inline-block px-6 py-3 bg-temple-red text-white font-medium rounded-md hover:bg-temple-brown transition-colors duration-300">
+Plan Your Visit
+</a> </div> <div data-aos="fade-left"> ${renderComponent($$result2, "GoogleMap", $$GoogleMap, {})} </div> </div> </div> </div> </section> ` })}`;
+}, "/home/project/src/pages/about.astro", void 0);
+
+const $$file = "/home/project/src/pages/about.astro";
+const $$url = "/about";
+
+const about = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$About,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+export { $$SectionTitle as $, $$GoogleMap as a, about as b };
