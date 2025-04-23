@@ -5,7 +5,7 @@
   "installCommand": "npm install",
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/404.html" }
+    { "src": "/(.*)", "dest": "/" }
   ],
   "env": {
     "NODE_VERSION": "18.x"
