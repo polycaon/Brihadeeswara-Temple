@@ -12,5 +12,18 @@ export default defineConfig({
     speedInsights: {
       enabled: true,
     },
-  })
+    imageService: true,
+    assets: true
+  }),
+  vite: {
+    build: {
+      assetsInlineLimit: 0,
+      chunkSizeWarningLimit: 1000,
+      rollupOptions: {
+        output: {
+          manualChunks: undefined
+        }
+      }
+    }
+  }
 });
